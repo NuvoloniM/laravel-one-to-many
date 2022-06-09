@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 // importo model
 use App\Models\Post;
+use App\Models\Category;
 // importo support per usare STR::
 use Illuminate\Support\Str;
 
@@ -30,7 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        // mi passo dei dati della category cosi da poter creare una select con essi 
+        $categories = Category::all();
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**
@@ -74,7 +77,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view ('admin.posts.edit', compact('post'));
+        // anche qui mi devo passare i dati per la select delle category
+        $categories = Category::all();
+        return view ('admin.posts.edit', compact('post','categories'));
     }
 
     /**

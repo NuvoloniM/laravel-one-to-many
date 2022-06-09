@@ -21,6 +21,14 @@
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>
+                        {{-- attraverso il collegamento post category riesco ad accedere al colore --}}
+                        @if( $post->category )
+                            <span class="badge badge-pill badge-{{$post->Category->color}}">{{ $post->Category->label}}</span>
+                        @else
+                            -
+                        @endif
+                    </td>
+                    <td>
                         <p>
                             {{$post->content}}
                         </p>

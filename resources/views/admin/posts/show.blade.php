@@ -10,6 +10,13 @@
             <div class="card-body">
               <h5 class="card-title">{{$post->title}}</h5>
               <h6 class="card-title">{{$post->id}}</h6>
+              <h6 class="card-title">
+                @if( $post->category )
+                  <span class="badge badge-pill badge-{{$post->Category->color}}">{{ $post->Category->label}}</span>
+                @else
+                  nessuna categoria è assegnata
+                @endif
+              </h6>
               <p class="card-text"> {{$post->content}}</p>
               @include('includes.deleteForm')
             </div>
