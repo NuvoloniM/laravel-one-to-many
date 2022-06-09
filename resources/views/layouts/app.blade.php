@@ -36,6 +36,9 @@
                         <li>
                             <a href="{{route('admin.posts.index')}}">Posts</a>
                         </li>
+                        <li>
+                            <a href="{{route('admin.categories.index')}}">Categories</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
