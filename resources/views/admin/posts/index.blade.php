@@ -9,6 +9,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
+                <th scope="col">Category</th>
                 <th scope="col">Content</th>
                 <th scope="col">Image</th>
                 <th scope="col">Slug</th>

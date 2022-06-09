@@ -30,7 +30,7 @@ class PostSeeder extends Seeder
             $post = new Post();
             // randomizzo i risultati nell'array creato. lo posso usare solo se importo illuminate\support\arr
             $post->category_id = Arr::random($category_ids);
-            $post->title = $faker->text(10);
+            $post->title = $faker->text();
             $post->content = $faker->paragraph(2);
             $post->image = $faker->imageUrl(250, 250);
             // al title aggiungo i trattini al posto dello spazio e rimuovo le maiuscole
