@@ -8,15 +8,16 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Lable</th>
+            <th scope="col">Label</th>
             <th scope="col">Color</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
             @forelse ($categories as $category)
                 <tr>
                 <td>{{$category->id}}</td>
-                <td>{{$category->lable}}</td>
+                <td>{{$category->label}}</td>
                 <td>{{$category->color}}</td>
                 <td>
                     <a href="{{ route('admin.categories.show', $category->id)}}" class="btn btn-info ">Show Details</a>
